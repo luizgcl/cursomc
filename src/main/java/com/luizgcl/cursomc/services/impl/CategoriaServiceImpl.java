@@ -29,4 +29,10 @@ public class CategoriaServiceImpl implements CategoriaService {
 		return repository.save(obj);
 	}
 
+	@Override
+	public Categoria update(Categoria obj) {
+		find(obj.getId());
+		return repository.save(obj);
+	}
+	
 }

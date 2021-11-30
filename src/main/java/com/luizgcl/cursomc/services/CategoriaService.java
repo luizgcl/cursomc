@@ -7,5 +7,7 @@ public interface CategoriaService {
 	Categoria find(Integer id);
 
 	Categoria insert(Categoria obj);
+
+	Categoria update(Categoria obj);
 	
 }
