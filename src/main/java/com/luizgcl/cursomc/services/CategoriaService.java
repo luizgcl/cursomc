@@ -9,5 +9,7 @@ public interface CategoriaService {
 	Categoria insert(Categoria obj);
 
 	Categoria update(Categoria obj);
+
+	void delete(Integer id);
 	
 }
