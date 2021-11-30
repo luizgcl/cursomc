@@ -5,5 +5,7 @@ import com.luizgcl.cursomc.domain.Categoria;
 public interface CategoriaService {
 	
 	Categoria find(Integer id);
+
+	Categoria insert(Categoria obj);
 	
 }
