@@ -1,6 +1,7 @@
 
 package com.luizgcl.cursomc.services.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,11 @@ public class CategoriaServiceImpl implements CategoriaService {
 		} catch (DataIntegrityViolationException exception) {
 			throw new DataIntegrityException("Não é possível excluir uma categoria que possui produtos");
 		}
+	}
+	
+	@Override
+	public List<Categoria> findAll() {
+		return repository.findAll();
 	}
 	
 }
