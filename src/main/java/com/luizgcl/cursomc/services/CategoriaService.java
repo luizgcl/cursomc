@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 
 import com.luizgcl.cursomc.domain.Categoria;
+import com.luizgcl.cursomc.dto.CategoriaDTO;
 
 public interface CategoriaService {
 	
@@ -19,5 +20,7 @@ public interface CategoriaService {
 	List<Categoria> findAll();
 	
 	Page<Categoria> findPage(Integer page, Integer linesPerPage, String oderBy, String direction);
+	
+	Categoria fromDto(CategoriaDTO objDto);
 	
 }

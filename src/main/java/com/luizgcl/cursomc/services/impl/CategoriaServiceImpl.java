@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.luizgcl.cursomc.domain.Categoria;
+import com.luizgcl.cursomc.dto.CategoriaDTO;
 import com.luizgcl.cursomc.repositories.CategoriaRepository;
 import com.luizgcl.cursomc.services.CategoriaService;
 import com.luizgcl.cursomc.services.exceptions.DataIntegrityException;
@@ -60,6 +61,10 @@ public class CategoriaServiceImpl implements CategoriaService {
 	public Page<Categoria> findPage(Integer page, Integer linesPerPage, String orderBy, String direction) {
 		PageRequest request = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
 		return repository.findAll(request);
+	}
+	
+	public Categoria fromDto(CategoriaDTO objDto) {
+		return new Categoria(objDto.getId(), objDto.getNome());
 	}
 	
 }
