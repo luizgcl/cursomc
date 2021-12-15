@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 
 import com.luizgcl.cursomc.domain.Cliente;
 import com.luizgcl.cursomc.dto.ClienteDTO;
+import com.luizgcl.cursomc.dto.ClienteNewDTO;
 
 public interface ClienteService {
 	
@@ -22,5 +23,7 @@ public interface ClienteService {
 	Page<Cliente> findPage(Integer page, Integer linesPerPage, String oderBy, String direction);
 	
 	Cliente fromDto(ClienteDTO objDto);
+	
+	Cliente fromDto(ClienteNewDTO objDto);
 
 }
