@@ -1,6 +1,5 @@
 package com.luizgcl.cursomc.services.impl;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
