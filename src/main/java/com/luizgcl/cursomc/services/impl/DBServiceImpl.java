@@ -1,6 +1,5 @@
 package com.luizgcl.cursomc.services.impl;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 
