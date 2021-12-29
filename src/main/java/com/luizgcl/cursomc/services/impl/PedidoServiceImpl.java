@@ -17,6 +17,7 @@ import com.luizgcl.cursomc.repositories.PagamentoRepository;
 import com.luizgcl.cursomc.repositories.PedidoRepository;
 import com.luizgcl.cursomc.services.BoletoService;
 import com.luizgcl.cursomc.services.ClienteService;
+import com.luizgcl.cursomc.services.EmailService;
 import com.luizgcl.cursomc.services.PedidoService;
 import com.luizgcl.cursomc.services.ProdutoService;
 import com.luizgcl.cursomc.services.exceptions.ObjectNotFoundException;
@@ -42,6 +43,9 @@ public class PedidoServiceImpl implements PedidoService {
 	@Autowired
 	private ClienteService clienteService;
 
+	@Autowired
+	private EmailService emailService;
+	
 	@Override
 	public Pedido find(Integer id) {
 		Optional<Pedido> obj = repository.findById(id);
@@ -73,7 +77,9 @@ public class PedidoServiceImpl implements PedidoService {
 		}
 		
 		itemPedidoRepository.saveAll(obj.getItens());
-		System.out.println(obj);
+		
+		emailService.sendOrderConfirmationEmail(obj);
+		
 		return obj;
 	}
 
