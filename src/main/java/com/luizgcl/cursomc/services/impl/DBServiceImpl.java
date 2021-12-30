@@ -119,7 +119,7 @@ public class DBServiceImpl implements DBService {
 		/**
 		 * Cliente e Endereço
 		*/
-		Cliente cli1 = new Cliente(null, "Maria Silva", "maria@gmail.com", "36378912377", TipoCliente.PF);
+		Cliente cli1 = new Cliente(null, "Maria Silva", "luiizgcl@gmail.com", "36378912377", TipoCliente.PF);
 		cli1.getTelefones().addAll(Arrays.asList("2736323", "93838393"));
 		
 		Endereco e1 = new Endereco(null, "Rua Flores", "300", "Apto. 203", "Jardim", "38220834", cli1, c1);
