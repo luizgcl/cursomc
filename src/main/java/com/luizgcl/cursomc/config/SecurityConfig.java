@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	public static final String[] PUBLIC_MATCHES = { "/h2-console/**" };
 	
-	public static final String[] PUBLIC_MATCHES_GET = { "/produtos/**", "/categorias/**" };
+	public static final String[] PUBLIC_MATCHES_GET = { "/produtos/**", "/categorias/**", "/clientes/**" };
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
